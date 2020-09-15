@@ -17,5 +17,5 @@ def tabpyHK80toWGS(input):
         "Easting": input["Easting"],
         "Northing": input["Northing"],
         "Latitude": hk80toWGS(input["Easting"], input["Northing"])[0],
-        "Latitude": hk80toWGS(input["Easting"], input["Northing"])[1]
+        "Longitude": hk80toWGS(input["Easting"], input["Northing"])[1]
     })
