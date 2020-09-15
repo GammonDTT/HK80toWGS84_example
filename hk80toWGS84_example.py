@@ -13,7 +13,7 @@ def hk80toWGS(x_in, y_in):
 def tabpyHK80toWGS(input):
     inProj = pyproj.Proj("ESRI:102140")  # This is the HK1980 Grid
     outProj = pyproj.Proj("epsg:4326")  # This is WGS 84
-    return pd.Dataframe({
+    return pd.DataFrame({
         "Easting": input["Easting"],
         "Northing": input["Northing"],
         "Latitude": hk80toWGS(input["Easting"], input["Northing"])[0],
